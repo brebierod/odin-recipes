@@ -3,18 +3,28 @@
 * {
     font-family: 'Montserrat', sans-serif;
     box-sizing: border-box;
+    background-size: cover;
+}
+
+body {
+    height: 100%;
+    background: linear-gradient(#d5eef6, #ffffff);
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 h1 {
     font-family: Lemonda;
     font-size: 36px;
     text-align: center;
+    color:rgb(13, 54, 84);
 }
 
 ul {
     display: flex;
     flex-flow: row wrap;
-    justify-content: flex-start;
+    justify-content: center;
     margin: 0 auto;
 }
 
@@ -24,12 +34,21 @@ ul li {
     border-radius: 20px;
     box-shadow: -10px 10px lightblue;
     display: flex;
-    width: 25%;
+    width: 33%;
     height: 200px;
     margin: 20px;
-    align-items: center;
+    padding-top: 30px;
+    font-weight: 800;
+    align-items: flex-start;
     justify-content: center;
     background-color: rgb(79, 104, 110);
+    object-fit: cover;
+}
+
+ul li:hover {
+    color: white;
+    background-color: aliceblue;
+    transform:translateY(-10px);
 }
 
 /* ========== END GLOBAL STYLES ========== */
@@ -37,12 +56,21 @@ ul li {
 /* ========== HOMEPAGE STYLES ========== */
 
 ul li:nth-child(1) {
-    background-image: url(https://www.ambitiouskitchen.com/wp-content/uploads/2019/04/bananaoatmealpancakes-6-594x594.jpg);
-    object-fit: contain;
+    background-image: url(https://feelgoodfoodie.net/wp-content/uploads/2023/04/Overnight-Oats-18-1024x1536.jpg);
+}
+
+ul li:nth-child(2) {
+    background-image: url(https://www.ambitiouskitchen.com/wp-content/uploads/2019/04/bananaoatmealpancakes-6-744x1116.jpg);
+}
+ul li:nth-child(3) {
+    background-image: url(https://i0.wp.com/chefandsteward.com/wp-content/uploads/2022/11/tuna-apple-salad-1.jpg?fit=735%2C1102&ssl=1g);
+}
+ul li:nth-child(4) {
+    background-image: url(https://www.sizzlefish.com/cdn/shop/articles/20221019152503-creamy-20dill-20salmon-20main-20image.jpg?v=1667567688g);
 }
 
 .recipe-link {
-    color: black;
+    color: rgb(13, 33, 63);
     text-decoration: none;
 }
 .recipe-link:hover {
