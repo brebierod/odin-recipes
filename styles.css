@@ -10,6 +10,7 @@ body {
     height: 100%;
     background: linear-gradient(#d5eef6, #ffffff);
     margin: 0;
+    background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
@@ -28,6 +29,7 @@ h1 {
 /* ========== HOMEPAGE STYLES ========== */
 
 .recipes-list {
+    /*This div holds all the recipe cards */
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -37,11 +39,12 @@ h1 {
 .recipe-card {
     /* outline: red 1px solid; */
     /* Use to see box lines */
-    
     border-radius: 20px;
     box-shadow: -10px 10px lightblue;
     display: flex;
-    width: 33%;
+    width: 20%;
+    min-width: 205px;
+    max-width: 250px;
     height: 250px;
     margin: 20px;
     padding-top: 30px;
@@ -50,19 +53,22 @@ h1 {
     justify-content: center;
     background-color: rgb(79, 104, 110);
     object-fit: cover;
-    position: relative; /*the overlay shows on the background without this */
-    overflow: hidden; /*the overlay shows on the background without this */
+    position: relative; /* IMPORTANT: the overlay shows on the background without this */
+    overflow: hidden; /* IMPORTANT: the overlay shows on the background without this */
 }
 
 .recipe-link {
+    /* The recipe titles/links */
     color: rgb(13, 33, 63);
     text-decoration: none;
 }
 
 .recipe-card:hover .recipe-link {
-    opacity: 0.4;
+    /* Title disappears upon hover */
+    opacity: 0.0;
 }
 
+/* Pictures */
 .recipe-card:nth-child(1) {
     background-image: url(https://feelgoodfoodie.net/wp-content/uploads/2023/04/Overnight-Oats-18-1024x1536.jpg);
 }
@@ -77,15 +83,18 @@ h1 {
     background-image: url(https://www.sizzlefish.com/cdn/shop/articles/20221019152503-creamy-20dill-20salmon-20main-20image.jpg?v=1667567688g);
 }
 
+/* Makes blue overlay visible upon hover */
 .recipe-card:hover .overlay {
   opacity: 1;
 }
 
 .recipe-card:hover {
+    /* Cards raise upon hover */
     transform:translateY(-10px);
 }
 
 .overlay {
+    /*This creates overlays, makes them invisible and removes from doc flow */
   position: absolute;
   top: 0;
   bottom: 0;
@@ -97,8 +106,16 @@ h1 {
   transition: opacity .5s ease;
   background-color: rgba(0, 140, 186, 0.8);
   color: white;
-  z-index: -1;
+  z-index: -1; /* Might not be necessary, but cards were blocked without this */
   text-align: center;
   padding-top: 50%;
   border-radius: 20px;
+}
+
+
+@media (min-width: 1000px) {
+
+    .recipes-list {
+        width: 70%;
+    }
 }
