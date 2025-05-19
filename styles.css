@@ -132,4 +132,8 @@ h2 {
     .recipes-list {
         width: 70%;
     }
+
+    .recipe-card{
+        height: 300px;
+    }
 }
