@@ -1,0 +1,11 @@
+/* ========== GLOBAL STYLES ========== */
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: Lemonda;
+    font-size: 36px;
+}
