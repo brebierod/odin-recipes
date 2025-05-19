@@ -8,4 +8,43 @@
 h1 {
     font-family: Lemonda;
     font-size: 36px;
+    text-align: center;
+}
+
+ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    margin: 0 auto;
+}
+
+ul li {
+    /* outline: red 1px solid; */
+    /* Use to see box lines */
+    border-radius: 20px;
+    box-shadow: -10px 10px lightblue;
+    display: flex;
+    width: 25%;
+    height: 200px;
+    margin: 20px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(79, 104, 110);
+}
+
+/* ========== END GLOBAL STYLES ========== */
+
+/* ========== HOMEPAGE STYLES ========== */
+
+ul li:nth-child(1) {
+    background-image: url(https://www.ambitiouskitchen.com/wp-content/uploads/2019/04/bananaoatmealpancakes-6-594x594.jpg);
+    object-fit: contain;
+}
+
+.recipe-link {
+    color: black;
+    text-decoration: none;
+}
+.recipe-link:hover {
+    color: white
 }
