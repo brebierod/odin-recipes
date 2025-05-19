@@ -21,14 +21,14 @@ h1 {
     color:rgb(13, 54, 84);
 }
 
-ul {
+.recipes-list {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     margin: 0 auto;
 }
 
-ul li {
+.recipe-card {
     /* outline: red 1px solid; */
     /* Use to see box lines */
     border-radius: 20px;
@@ -45,7 +45,7 @@ ul li {
     object-fit: cover;
 }
 
-ul li:hover {
+.recipe-card:hover {
     color: white;
     background-color: aliceblue;
     transform:translateY(-10px);
@@ -55,19 +55,35 @@ ul li:hover {
 
 /* ========== HOMEPAGE STYLES ========== */
 
-ul li:nth-child(1) {
+.recipe-card:nth-child(1) {
     background-image: url(https://feelgoodfoodie.net/wp-content/uploads/2023/04/Overnight-Oats-18-1024x1536.jpg);
 }
 
-ul li:nth-child(2) {
+.recipe-card:nth-child(2) {
     background-image: url(https://www.ambitiouskitchen.com/wp-content/uploads/2019/04/bananaoatmealpancakes-6-744x1116.jpg);
 }
-ul li:nth-child(3) {
+.recipe-card:nth-child(3) {
     background-image: url(https://i0.wp.com/chefandsteward.com/wp-content/uploads/2022/11/tuna-apple-salad-1.jpg?fit=735%2C1102&ssl=1g);
 }
-ul li:nth-child(4) {
+.recipe-card:nth-child(4) {
     background-image: url(https://www.sizzlefish.com/cdn/shop/articles/20221019152503-creamy-20dill-20salmon-20main-20image.jpg?v=1667567688g);
 }
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+
+.container:hover .overlay {
+  opacity: 1;
 
 .recipe-link {
     color: rgb(13, 33, 63);
