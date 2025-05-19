@@ -22,6 +22,11 @@ h1 {
     color:rgb(13, 54, 84);
 }
 
+h2 {
+    font-size: 16px;
+    color: rgb(13, 33, 63);
+}
+
 
 
 /* ========== END GLOBAL STYLES ========== */
@@ -59,11 +64,20 @@ h1 {
 
 .recipe-link {
     /* The recipe titles/links */
-    color: rgb(13, 33, 63);
+    color: rgb(238, 238, 239);
     text-decoration: none;
+    /*Makes entire div clickable */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    text-align: center;
+    padding-top: 50%;
 }
 
-.recipe-card:hover .recipe-link {
+.recipe-card:hover .recipe-title {
     /* Title disappears upon hover */
     opacity: 0.0;
 }
