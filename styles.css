@@ -4,6 +4,7 @@
     font-family: 'Montserrat', sans-serif;
     box-sizing: border-box;
     background-size: cover;
+    color: rgb(13, 54, 84)
 }
 
 body {
@@ -19,7 +20,9 @@ h1 {
     font-family: 'Cedarville Cursive', cursive;
     font-size: 36px;
     text-align: center;
-    color:rgb(13, 54, 84);
+    color: rgb(64, 104, 133);
+    margin-bottom: -5px;
+    line-height: 40px;
 }
 
 h2 {
@@ -28,11 +31,34 @@ h2 {
     color: rgb(13, 33, 63);
 }
 
+.wrapper {
+    width: 80%;
+    max-width: 1200px;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
 
 
 /* ========== END GLOBAL STYLES ========== */
 
 /* ========== HOMEPAGE STYLES ========== */
+
+.home-icon {
+    margin: auto;
+    width: 40px;
+}
+
+.home {
+    margin: 0 auto;
+    padding: 20px 0 0 0;
+}
+
+.instructions {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
 
 .recipes-list {
     /*This div holds all the recipe cards */
@@ -59,8 +85,10 @@ h2 {
     justify-content: center;
     background-color: rgb(79, 104, 110);
     object-fit: cover;
-    position: relative; /* IMPORTANT: the overlay shows on the background without this */
-    overflow: hidden; /* IMPORTANT: the overlay shows on the background without this */
+    position: relative;
+    /* IMPORTANT: the overlay shows on the background without this */
+    overflow: hidden;
+    /* IMPORTANT: the overlay shows on the background without this */
 }
 
 .recipe-link {
@@ -91,50 +119,57 @@ h2 {
 .recipe-card:nth-child(2) {
     background-image: url(https://www.ambitiouskitchen.com/wp-content/uploads/2019/04/bananaoatmealpancakes-6-744x1116.jpg);
 }
+
 .recipe-card:nth-child(3) {
     background-image: url(https://i0.wp.com/chefandsteward.com/wp-content/uploads/2022/11/tuna-apple-salad-1.jpg?fit=735%2C1102&ssl=1g);
 }
+
 .recipe-card:nth-child(4) {
     background-image: url(https://www.sizzlefish.com/cdn/shop/articles/20221019152503-creamy-20dill-20salmon-20main-20image.jpg?v=1667567688g);
 }
 
 /* Makes blue overlay visible upon hover */
 .recipe-card:hover .overlay {
-  opacity: 1;
+    opacity: 1;
 }
 
 .recipe-card:hover {
     /* Cards raise upon hover */
-    transform:translateY(-10px);
+    transform: translateY(-10px);
 }
 
 .overlay {
     /*This creates overlays, makes them invisible and removes from doc flow */
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  transition: opacity .5s ease;
-  background-color: rgba(0, 140, 186, 0.8);
-  color: white;
-  z-index: -1; /* Might not be necessary, but cards were blocked without this */
-  text-align: center;
-  padding-top: 50%;
-  border-radius: 20px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: opacity .5s ease;
+    background-color: rgba(0, 140, 186, 0.8);
+    color: white;
+    z-index: -1;
+    /* Might not be necessary, but cards were blocked without this */
+    text-align: center;
+    padding-top: 50%;
+    border-radius: 20px;
 }
 
-
 @media (min-width: 977px) {
+
 
     .recipes-list {
         width: 70%;
     }
 
-    .recipe-card{
+    .recipe-card {
         height: 300px;
     }
+
 }
+
+
+
