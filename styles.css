@@ -15,11 +15,17 @@ body {
 }
 
 h1 {
-    font-family: Lemonda;
+    font-family: 'Brush Script MR', cursive;
     font-size: 36px;
     text-align: center;
     color:rgb(13, 54, 84);
 }
+
+
+
+/* ========== END GLOBAL STYLES ========== */
+
+/* ========== HOMEPAGE STYLES ========== */
 
 .recipes-list {
     display: flex;
@@ -31,11 +37,12 @@ h1 {
 .recipe-card {
     /* outline: red 1px solid; */
     /* Use to see box lines */
+    
     border-radius: 20px;
     box-shadow: -10px 10px lightblue;
     display: flex;
     width: 33%;
-    height: 200px;
+    height: 250px;
     margin: 20px;
     padding-top: 30px;
     font-weight: 800;
@@ -43,17 +50,18 @@ h1 {
     justify-content: center;
     background-color: rgb(79, 104, 110);
     object-fit: cover;
+    position: relative; /*the overlay shows on the background without this */
+    overflow: hidden; /*the overlay shows on the background without this */
 }
 
-.recipe-card:hover {
-    color: white;
-    background-color: aliceblue;
-    transform:translateY(-10px);
+.recipe-link {
+    color: rgb(13, 33, 63);
+    text-decoration: none;
 }
 
-/* ========== END GLOBAL STYLES ========== */
-
-/* ========== HOMEPAGE STYLES ========== */
+.recipe-card:hover .recipe-link {
+    opacity: 0.4;
+}
 
 .recipe-card:nth-child(1) {
     background-image: url(https://feelgoodfoodie.net/wp-content/uploads/2023/04/Overnight-Oats-18-1024x1536.jpg);
@@ -69,6 +77,14 @@ h1 {
     background-image: url(https://www.sizzlefish.com/cdn/shop/articles/20221019152503-creamy-20dill-20salmon-20main-20image.jpg?v=1667567688g);
 }
 
+.recipe-card:hover .overlay {
+  opacity: 1;
+}
+
+.recipe-card:hover {
+    transform:translateY(-10px);
+}
+
 .overlay {
   position: absolute;
   top: 0;
@@ -78,17 +94,11 @@ h1 {
   height: 100%;
   width: 100%;
   opacity: 0;
-  transition: .5s ease;
-  background-color: #008CBA;
-}
-
-.container:hover .overlay {
-  opacity: 1;
-
-.recipe-link {
-    color: rgb(13, 33, 63);
-    text-decoration: none;
-}
-.recipe-link:hover {
-    color: white
+  transition: opacity .5s ease;
+  background-color: rgba(0, 140, 186, 0.8);
+  color: white;
+  z-index: -1;
+  text-align: center;
+  padding-top: 50%;
+  border-radius: 20px;
 }
